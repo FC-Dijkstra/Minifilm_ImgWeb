@@ -1,0 +1,30 @@
+dans blender:
+    pour chaque élément ayant besoin d'une texture, créer un matériau qui lui est propre.
+    prendre tout le mesh -> clic droit -> smart UV project pour n'avoir qu'une seule UV map
+    export -> FBX
+
+dans substance (avec GPU nVidia):
+    nouveau projet:
+        PBR metallic roughness
+        fichier FBX exporté
+    
+    ...
+    texturer l'objet
+    ...
+
+    enregistrer le projet en tant que .spp
+    
+    file -> export textures:
+        output directory a définir
+        PBR metallic roughness
+        -> export
+
+retour dans blender:
+    avec l'addon NODE-WRANGLER actif
+    aller dans shading
+    pour chaque matériau:
+        séléctionner le shader principled BDSF
+        Ctrl+Shift+T
+        séléctionner toutes les textures de l'objet
+
+Et Voila!
